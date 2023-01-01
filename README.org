@@ -1,0 +1,10 @@
+#+TITLE: textsapp build
+this is a nixos build for texts app on linux
+
+i want to use texts app because it will make my messaging productivity so good
+
+i will figure this all out soon
+
+what doesn't it support that i use? nothing, i think
+
+https://discourse.nixos.org/t/cant-run-an-appimage-app/10443: How to package and run an appimage? Can also do this 'dynamically' by using `appimage-run`: https://ersocon.net/articles/how-to-run-an-appimage-on-nixos~aae85dca-6fa7-49de-af5a-ac40f6eeec0c
