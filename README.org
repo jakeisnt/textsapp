@@ -1,5 +1,10 @@
 #+TITLE: textsapp build
 
-this is a nixos build for texts app on linux. i want to use texts app because it will make my messaging productivity great, and it seems kind of infeasable for any FOSS solution to keep up with all of the updates to various texting app APIs (and hidden protocols, when the APIs don't exist).
+NOTE: This currently doesn't work. Poke me if you want to use this!
 
+This is a NixOS build for texts app on Linux. I want to use texts app because it will make my messaging productivity great, and it seems kind of infeasable for any FOSS solution to keep up with all of the updates to various texting app APIs (and hidden protocols, when the APIs don't exist).
+
+* Resources
 https://discourse.nixos.org/t/cant-run-an-appimage-app/10443: How to package and run an appimage? Can also do this 'dynamically' by using `appimage-run`: https://ersocon.net/articles/how-to-run-an-appimage-on-nixos~aae85dca-6fa7-49de-af5a-ac40f6eeec0c
+[[https://github.com/AppImage/AppImageKit/issues/472][AppImage/AppImageKit#472 AppImage(s) on NixOS (doesn't work)]]
+[[https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/applications/misc/remnote/default.nix][nixpkgs/default.nix at nixos-unstable · NixOS/nixpkgs · GitHub]] -- uses `appImageTools`

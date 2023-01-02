@@ -11,8 +11,9 @@
         pkgs = nixpkgs.legacyPackages.${system};
         build = pkgs.appimageTools.wrapType2 rec {
           pname = "texts-dot-com";
-          version = "??";
+          version = "1.0"; # TODO
 
+          # Can the AppImage be pinned?
           src = pkgs.fetchurl {
             url = "https://texts.com/api/install/linux/x64/latest.AppImage";
             sha256 = "1y3c5pn395v9vzck2g3vpcg3x82ql1agxpp824r6k5yxgbybg0r5";
