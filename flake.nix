@@ -9,7 +9,27 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        build = pkgs.appimageTools.wrapType2 rec {
+          pname = "texts-dot-com";
+          version = "??";
+
+          src = pkgs.fetchurl {
+            url = "https://texts.com/api/install/linux/x64/latest.AppImage";
+            sha256 = "1y3c5pn395v9vzck2g3vpcg3x82ql1agxpp824r6k5yxgbybg0r5";
+          };
+
+          meta = with pkgs.lib; {
+            description = "A texts app";
+            homepage = "https://texts.com/";
+            maintainers = with maintainers; [ jakeisnt ];
+            # license = licenses.unfree; TODO
+            platforms = platforms.linux;
+          };
+        };
       in {
+        defaultPackage.${system} = build;
+        packages."texts-dot-com" = build;
+
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
             openssl
@@ -18,6 +38,8 @@
             pkg-config
             zlib
             clang
+
+            build
 
             glibc.out
             glibc.static
